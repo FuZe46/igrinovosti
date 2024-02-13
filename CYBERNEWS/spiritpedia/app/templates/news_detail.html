@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ news.title }}</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<header>
+    <h1>SPIRIT PEDIA</h1>
+    <img src="images/logo.jpg" alt="">
+</header>
+<nav>
+    <ul>
+        <li><a href="{% url 'news_list' %}">Вернуться к списку новостей</a></li>
+    </ul>
+</nav>
+<div class="container">
+    <h2>{{ news.title }}</h2>
+    <img src="{{ news.image.url }}" alt="{{ news.title }}">
+    <p>{{ news.content }}</p>
+</div>
+<footer>
+    <p>&copy; 2024 SPIRIT PEDIA - Игровые новости</p>
+</footer>
+</body>
+</html>

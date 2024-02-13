@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Добавить новость</title>
+</head>
+<body>
+    <h1>Добавить новость</h1>
+    <form method="post" enctype="multipart/form-data">  <!-- Обязательно добавляем enctype="multipart/form-data" для загрузки файлов -->
+        {% csrf_token %}
+        <label for="title">Заголовок:</label><br>
+        <input type="text" id="title" name="title"><br>
+        <label for="content">Содержание:</label><br>
+        <textarea id="content" name="content"></textarea><br>
+        <label for="image">Изображение:</label><br>  <!-- Добавляем поле для загрузки изображения -->
+        <input type="file" id="image" name="image"><br>  <!-- Тип поля должен быть file для загрузки файлов -->
+        <input type="submit" value="Создать новость">
+    </form>
+</body>
+</html>
